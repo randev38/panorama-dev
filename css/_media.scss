@@ -1,0 +1,60 @@
+@use 'sass:math';
+
+$Desktop: 1599px;
+$Tablet: 1199px;
+$Mobile: 767px;
+
+@mixin laptop {
+  @media screen and (max-width: $Desktop) and (min-width: $Tablet + 1px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (max-width: $Desktop) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: $Tablet) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: $Mobile) {
+    @content;
+  }
+}
+
+@mixin hover {
+  @media (hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+
+  @media (hover: none) {
+    &:active {
+      @content;
+    }
+  }
+}
+
+@function fl($max: 48, $min: 16) {
+  $maxViewportWidth: 1920;
+  $minViewportWidth: 1600;
+
+  $maxSize: math.div($max, 16);
+  $minSize: math.div($min, 16);
+  $maxWidth: math.div($maxViewportWidth, 16);
+  $minWidth: math.div($minViewportWidth, 16);
+
+  $slope: math.div(($maxSize - $minSize), ($maxWidth - $minWidth));
+  $yAxisIntersection: -$minWidth * $slope + $minSize;
+
+  @return clamp(#{$minSize * 1rem},
+    #{$yAxisIntersection * 1rem} + #{$slope * 100vw},
+    #{$maxSize * 1rem});
+}

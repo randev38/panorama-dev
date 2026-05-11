@@ -1,0 +1,247 @@
+.privacy__hero {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  max-width: 1120px;
+  margin: 0 auto 60px;
+}
+
+.privacy__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 10px 20px 12px;
+  border-radius: 50px;
+  background: #f4f1e2;
+  color: #000;
+  font-family: "Helvetica", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 22px;
+  letter-spacing: 0.32px;
+  text-transform: uppercase;
+}
+
+.privacy__title {
+  margin: 0;
+  color: #000;
+  font-family: "Noto Serif", sans-serif;
+  font-size: 48px;
+  font-weight: 300;
+  line-height: 58px;
+  text-transform: uppercase;
+}
+
+.privacy__lead {
+  max-width: 880px;
+  margin: 0;
+  color: #000;
+  font-family: "Helvetica", sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 30px;
+  letter-spacing: 0.48px;
+}
+
+.privacy__content {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 60px;
+  background: #f7f6ef;
+}
+
+.privacy__section+.privacy__section {
+  margin-top: 50px;
+  padding-top: 50px;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.privacy__section-title {
+  margin: 0 0 24px;
+  color: #000;
+  font-family: "Noto Serif", sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 30px;
+  letter-spacing: 0.48px;
+}
+
+.privacy__text,
+.privacy__list,
+.privacy__table-value,
+.privacy__note {
+  margin: 0;
+  color: #000;
+  font-family: "Helvetica", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 22px;
+  letter-spacing: 0.32px;
+}
+
+.privacy__text+.privacy__text,
+.privacy__text+.privacy__list,
+.privacy__list+.privacy__text,
+.privacy__note+.privacy__text {
+  margin-top: 16px;
+}
+
+.privacy__list {
+  padding-left: 1.5em;
+}
+
+.privacy__list li+li {
+  margin-top: 12px;
+}
+
+.privacy__table {
+  display: grid;
+  grid-template-columns: minmax(220px, 320px) 1fr;
+  gap: 1px;
+  margin-top: 24px;
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.privacy__table-label,
+.privacy__table-value {
+  margin: 0;
+  padding: 24px;
+  background: #fff;
+}
+
+.privacy__table-label {
+  color: #000;
+  font-family: "Helvetica", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 22px;
+  letter-spacing: 0.32px;
+}
+
+.privacy__note {
+  margin-top: 32px;
+}
+
+.privacy__contacts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 24px;
+  margin-top: 24px;
+}
+
+.privacy__contact-link {
+  color: #000;
+  font-family: "Helvetica", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 22px;
+  letter-spacing: 0.32px;
+}
+
+@media screen and (max-width: 1599px) {
+  .privacy {
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+
+  .privacy__hero {
+    margin-bottom: 40px;
+  }
+
+  .privacy__title {
+    font-size: 38px;
+    line-height: 48px;
+  }
+
+  .privacy__lead {
+    font-size: 20px;
+    line-height: 26px;
+    letter-spacing: 0.4px;
+  }
+
+  .privacy__content {
+    padding: 40px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .privacy {
+    margin-top: 64px;
+    margin-bottom: 64px;
+  }
+
+  .privacy__hero {
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .privacy__eyebrow {
+    min-height: 30px;
+    padding: 6px 14px;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 18px;
+    letter-spacing: 0.24px;
+  }
+
+  .privacy__title {
+    font-size: 28px;
+    line-height: 34px;
+  }
+
+  .privacy__lead {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.32px;
+  }
+
+  .privacy__content {
+    padding: 24px 16px;
+  }
+
+  .privacy__section+.privacy__section {
+    margin-top: 32px;
+    padding-top: 32px;
+  }
+
+  .privacy__section-title {
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0.32px;
+  }
+
+  .privacy__text,
+  .privacy__list,
+  .privacy__table-label,
+  .privacy__table-value,
+  .privacy__note,
+  .privacy__contact-link {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.28px;
+  }
+
+  .privacy__table {
+    grid-template-columns: 1fr;
+  }
+
+  .privacy__table-label,
+  .privacy__table-value {
+    padding: 16px;
+  }
+
+  .privacy__table-label {
+    padding-bottom: 8px;
+  }
+
+  .privacy__table-value {
+    padding-top: 0;
+  }
+
+  .privacy__note {
+    margin-top: 24px;
+  }
+}
