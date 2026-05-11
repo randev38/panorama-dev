@@ -5,6 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="icon" type="image/svg+xml" sizes="any" href="/favicon.svg">
+    <link rel="icon" href="/favicon-light.svg" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="/favicon-dark.svg" media="(prefers-color-scheme: dark)">
+    <link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/apple-touch-icon.png">
     <title>Политика обработки персональных данных | Panorama</title>
     <meta name="description" content="Политика в отношении обработки персональных данных на сайте panorama.villas.">
 
@@ -352,6 +358,24 @@
         </section>
     </main>
 
+    <section class="cookie-banner" data-cookie-banner hidden aria-label="Уведомление об использовании cookie">
+        <h2 class="cookie-banner__title">Мы используем cookie</h2>
+        <p class="cookie-banner__text">
+            Продолжая пользоваться сайтом, вы соглашаетесь на использование файлов cookie. Подробнее в
+            <a href="/privacy.html">политике конфиденциальности</a>.
+        </p>
+        <div class="cookie-banner__actions">
+            <button type="button" class="cookie-banner__button cookie-banner__button--accept"
+                data-cookie-action="accept">
+                Принять
+            </button>
+            <button type="button" class="cookie-banner__button cookie-banner__button--decline"
+                data-cookie-action="decline">
+                Отклонить
+            </button>
+        </div>
+    </section>
+
     <footer class="footer">
         <div class="container">
             <div class="footer_wrap">
@@ -401,6 +425,7 @@
             </div>
         </div>
     </footer>
+    <script src="js/cookie-banner.js"></script>
 </body>
 
 </html>
