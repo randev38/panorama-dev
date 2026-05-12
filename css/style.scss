@@ -1614,12 +1614,15 @@ a:not([class*="_btn"]):not([class*="_logo"]):not(.swiper-button-prev):not(.swipe
          }
 
          &.right {
-            display: flex;
-            justify-content: flex-end;
+            text-align: right;
+
+            a {
+               font-weight: 400;
+            }
 
             @include tablet {
-               justify-content: center;
-               align-items: center;
+               display: block !important;
+               text-align: center;
             }
          }
 

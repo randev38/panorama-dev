@@ -500,7 +500,7 @@ a:not([class*=_btn]):not([class*=_logo]):not(.swiper-button-prev):not(.swiper-bu
 }
 @media screen and (max-width: 1199px) {
   .header_wrap_left_logo {
-    max-width: 91px;
+    max-width: 100px;
   }
 }
 .header_wrap_left_logo img,
@@ -2612,13 +2612,15 @@ a:not([class*=_btn]):not([class*=_logo]):not(.swiper-button-prev):not(.swiper-bu
   }
 }
 .footer_wrap_bottom_it.right {
-  display: flex;
-  justify-content: flex-end;
+  text-align: right;
+}
+.footer_wrap_bottom_it.right a {
+  font-weight: 400;
 }
 @media screen and (max-width: 1199px) {
   .footer_wrap_bottom_it.right {
-    justify-content: center;
-    align-items: center;
+    display: block !important;
+    text-align: center;
   }
 }
 .footer_wrap_bottom_it a {
