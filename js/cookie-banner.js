@@ -8,9 +8,7 @@ const initCookieBanner = () => {
    }
 
    const acceptButton = banner.querySelector('[data-cookie-action="accept"]');
-   const declineButton = banner.querySelector('[data-cookie-action="decline"]');
-
-   if (!(acceptButton instanceof HTMLButtonElement) || !(declineButton instanceof HTMLButtonElement)) {
+   if (!(acceptButton instanceof HTMLButtonElement)) {
       return;
    }
 
@@ -47,7 +45,7 @@ const initCookieBanner = () => {
 
       const storedValue = window.localStorage.getItem(COOKIE_CONSENT_STORAGE_KEY);
 
-      return storedValue === 'accepted' || storedValue === 'declined' ? storedValue : '';
+      return storedValue === 'accepted' ? storedValue : '';
    };
 
    const closeBanner = () => {
@@ -83,10 +81,6 @@ const initCookieBanner = () => {
 
    acceptButton.addEventListener('click', () => {
       saveConsent('accepted');
-   });
-
-   declineButton.addEventListener('click', () => {
-      saveConsent('declined');
    });
 
    syncConsentState();

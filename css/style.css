@@ -3017,11 +3017,6 @@ a:not([class*=_btn]):not([class*=_logo]):not(.swiper-button-prev):not(.swiper-bu
   color: #000;
   background: #FDB604;
 }
-.cookie-banner__button--decline {
-  color: #000;
-  background: transparent;
-  border-color: rgba(0, 0, 0, 0.16);
-}
 
 .modal {
   position: fixed;
