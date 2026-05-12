@@ -108,7 +108,7 @@ a:not([class*="_btn"]):not([class*="_logo"]):not(.swiper-button-prev):not(.swipe
    width: 100%;
    max-width: 1920px;
    margin: 0 auto;
-   padding: 0 fl(20);
+   padding: 0 fl(50, 20);
 
    @include laptop {
       padding: 0 20px;
@@ -1799,13 +1799,13 @@ a:not([class*="_btn"]):not([class*="_logo"]):not(.swiper-button-prev):not(.swipe
 
 .cookie-banner {
    position: fixed;
-   left: 24px;
+   left: fl(50, 20);
    bottom: 24px;
    z-index: 110;
    width: min(100% - 48px, 420px);
    padding: 24px;
    background: rgba(247, 242, 226, 0.96);
-   border: 1px solid rgba(0, 0, 0, 0.08);
+
    box-shadow: 0 24px 60px rgba(15, 15, 15, 0.16);
    backdrop-filter: blur(10px);
    opacity: 0;
@@ -1816,12 +1816,18 @@ a:not([class*="_btn"]):not([class*="_logo"]):not(.swiper-button-prev):not(.swipe
       visibility .35s ease,
       transform .35s ease;
 
+   @include desktop {
+      left: 20px;
+      bottom: 20px;
+   }
+
    @include tablet {
-      left: 12px;
-      right: 12px;
-      bottom: 12px;
+      left: 13px;
+      right: 11px;
+      bottom: 13px;
       width: auto;
       padding: 18px 16px 16px;
+      max-width: 400px;
    }
 
    &.is-visible {

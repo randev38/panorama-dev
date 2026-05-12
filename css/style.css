@@ -368,7 +368,7 @@ a:not([class*=_btn]):not([class*=_logo]):not(.swiper-button-prev):not(.swiper-bu
   width: 100%;
   max-width: 1920px;
   margin: 0 auto;
-  padding: 0 clamp(1rem, -0.25rem + 1.25vw, 1.25rem);
+  padding: 0 clamp(1.25rem, -8.125rem + 9.375vw, 3.125rem);
 }
 @media screen and (max-width: 1599px) and (min-width: 1200px) {
   .container {
@@ -2874,13 +2874,12 @@ a:not([class*=_btn]):not([class*=_logo]):not(.swiper-button-prev):not(.swiper-bu
 
 .cookie-banner {
   position: fixed;
-  left: 24px;
+  left: clamp(1.25rem, -8.125rem + 9.375vw, 3.125rem);
   bottom: 24px;
   z-index: 110;
   width: min(100% - 48px, 420px);
   padding: 24px;
   background: rgba(247, 242, 226, 0.96);
-  border: 1px solid rgba(0, 0, 0, 0.08);
   box-shadow: 0 24px 60px rgba(15, 15, 15, 0.16);
   backdrop-filter: blur(10px);
   opacity: 0;
@@ -2888,13 +2887,20 @@ a:not([class*=_btn]):not([class*=_logo]):not(.swiper-button-prev):not(.swiper-bu
   transform: translate3d(0, 18px, 0);
   transition: opacity 0.35s ease, visibility 0.35s ease, transform 0.35s ease;
 }
+@media screen and (max-width: 1599px) {
+  .cookie-banner {
+    left: 20px;
+    bottom: 20px;
+  }
+}
 @media screen and (max-width: 1199px) {
   .cookie-banner {
-    left: 12px;
-    right: 12px;
-    bottom: 12px;
+    left: 13px;
+    right: 11px;
+    bottom: 13px;
     width: auto;
     padding: 18px 16px 16px;
+    max-width: 400px;
   }
 }
 .cookie-banner.is-visible {
