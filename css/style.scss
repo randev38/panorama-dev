@@ -356,7 +356,7 @@ a:not([class*="_btn"]):not([class*="_logo"]):not(.swiper-button-prev):not(.swipe
          &_burger {
             @include button;
             color: #000;
-            background: #FDB604;
+            background: #FE9604;
             display: none;
 
             @include tablet {
@@ -571,7 +571,7 @@ a:not([class*="_btn"]):not([class*="_logo"]):not(.swiper-button-prev):not(.swipe
                @include button;
 
                &.orange {
-                  background: #FDB604;
+                  background: #FE9604;
                }
 
                &.gray {
@@ -1703,7 +1703,7 @@ a:not([class*="_btn"]):not([class*="_logo"]):not(.swiper-button-prev):not(.swipe
             }
 
             &.is-active {
-               background: #FDB604;
+               background: #FE9604;
             }
          }
       }
@@ -1730,7 +1730,7 @@ a:not([class*="_btn"]):not([class*="_logo"]):not(.swiper-button-prev):not(.swipe
                align-items: flex-start;
                width: 100%;
                max-width: 50%;
-               background: #FDB604;
+               background: #FE9604;
                padding: 60px;
                row-gap: 40px;
 
@@ -1869,7 +1869,7 @@ a:not([class*="_btn"]):not([class*="_logo"]):not(.swiper-button-prev):not(.swipe
 
       &--accept {
          color: #000;
-         background: #FDB604;
+         background: #FE9604;
       }
    }
 }

@@ -747,7 +747,7 @@ a:not([class*=_btn]):not([class*=_logo]):not(.swiper-button-prev):not(.swiper-bu
 }
 .header_wrap_right_burger {
   color: #000;
-  background: #FDB604;
+  background: #FE9604;
   display: none;
 }
 @media screen and (max-width: 1199px) {
@@ -1088,7 +1088,7 @@ a:not([class*=_btn]):not([class*=_logo]):not(.swiper-button-prev):not(.swiper-bu
   }
 }
 .first_wrap_right_btns_btn.orange {
-  background: #FDB604;
+  background: #FE9604;
 }
 .first_wrap_right_btns_btn.gray {
   background: #E4E4E4;
@@ -2717,7 +2717,7 @@ a:not([class*=_btn]):not([class*=_logo]):not(.swiper-button-prev):not(.swiper-bu
   }
 }
 .client_wrap_tabs_tab.is-active {
-  background: #FDB604;
+  background: #FE9604;
 }
 .client_wrap_content_it {
   display: flex;
@@ -2739,7 +2739,7 @@ a:not([class*=_btn]):not([class*=_logo]):not(.swiper-button-prev):not(.swiper-bu
   align-items: flex-start;
   width: 100%;
   max-width: 50%;
-  background: #FDB604;
+  background: #FE9604;
   padding: 60px;
   row-gap: 40px;
 }
@@ -3021,7 +3021,7 @@ a:not([class*=_btn]):not([class*=_logo]):not(.swiper-button-prev):not(.swiper-bu
 }
 .cookie-banner__button--accept {
   color: #000;
-  background: #FDB604;
+  background: #FE9604;
 }
 
 .modal {
