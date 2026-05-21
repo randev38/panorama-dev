@@ -374,6 +374,7 @@ const initClientTabs = () => {
 
 initClientTabs();
 
+
 const initCallbackModal = () => {
    const modal = document.querySelector('#callback-modal');
 
@@ -670,3 +671,37 @@ const initSectionRevealAnimations = () => {
 };
 
 initSectionRevealAnimations();
+
+
+let trend_swiper = new Swiper('.trend_swiper', {
+   slidesPerView: 1,
+   spaceBetween: 0,
+   speed: 800,
+   grabCursor: true,
+   loop: true,
+   effect: 'fade',
+   fadeEffect: {
+      crossFade: true
+   },
+   navigation: {
+      nextEl: '.trend_swiper_btns_next',
+      prevEl: '.trend_swiper_btns_prev',
+   },
+});
+
+let economy_wrap_swiper = new Swiper('.economy_wrap_swiper', {
+   slidesPerView: 1,
+   spaceBetween: 0,
+   speed: 800,
+   grabCursor: true,
+   loop: true,
+   autoHeight: true,
+   effect: 'fade',
+   fadeEffect: {
+      crossFade: true
+   },
+   navigation: {
+      nextEl: '.economy_wrap_swiper_btns_next',
+      prevEl: '.economy_wrap_swiper_btns_prev',
+   },
+});

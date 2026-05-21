@@ -1,0 +1,151 @@
+- generic [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e4]:
+      - link "Panorama" [ref=e161] [cursor=pointer]:
+        - /url: /
+        - img "Panorama" [ref=e9]
+      - button "Открыть меню" [ref=e12] [cursor=pointer]:
+        - generic [ref=e13]: Меню
+  - main [ref=e14]:
+    - generic [ref=e19]:
+      - paragraph [ref=e21]:
+        - text: Философия проекта – тишина, как новая роскошь.
+        - text: Digital Detox в лесу
+      - generic [ref=e22]:
+        - 'heading "Private Wellness Club «PANORAMA»: как мы соединили доход, сервис и восстановление" [level=1] [ref=e23]'
+        - link "персональная консультация" [ref=e24] [cursor=pointer]:
+          - /url: "#"
+    - generic [ref=e30]:
+      - heading "Закрытый клуб управляемых резиденций с инновационной wellness-концепцией и высокой доходностью" [level=2] [ref=e33]
+      - generic [ref=e34]:
+        - generic [ref=e35]: "Мы – то, что вы искали, если:"
+        - generic [ref=e36]:
+          - generic [ref=e38]:
+            - generic [ref=e39]: (01)
+            - heading "Придерживаетесь принципа – «капитал должен работать», при этом у него должна быть понятная доходность и отсутствовать «головная боль» для бенефициара" [level=3] [ref=e40]
+          - generic [ref=e42]:
+            - generic [ref=e43]: (02)
+            - heading "Хотите владеть уникальным активом, не имеющим аналогов в РФ, который работает пока вы отдыхаете" [level=3] [ref=e44]
+          - generic [ref=e46]:
+            - generic [ref=e47]: (03)
+            - heading "Ищите трендовую нишу для инвестирования, с быстрым сроком окупаемости и высокой ликвидностью" [level=3] [ref=e48]
+    - generic [ref=e49]:
+      - generic [ref=e51]:
+        - 'heading "Концепция созданная на стыке 2 трендов: «Ментальное здоровье» и «Тишина — новая роскошь»" [level=2] [ref=e52]'
+        - paragraph [ref=e53]: Закрытый клуб, где главная ценность — тотальное уединение и восстановление через современные аппаратные программы оздоровления
+      - generic [ref=e54]:
+        - generic [ref=e55]:
+          - group "1 / 5" [ref=e56]:
+            - generic [ref=e57]:
+              - generic [ref=e58]: (01-05)
+              - heading "Инновационная wellness-концепция" [level=3] [ref=e59]
+              - paragraph [ref=e60]: Проактивное долголетие через биомаркеры, флоатинг, нейровелнес, интегративная медицина сна
+          - group "2 / 5":
+            - generic:
+              - generic: (02-05)
+              - heading "Невидимый сервис" [level=3]
+              - paragraph: Личный шеф-повар и батлер, консультации терапевта, завтраки на террасе, никаких шведских столов
+          - group "3 / 5":
+            - generic:
+              - generic: (03-05)
+              - heading "Архитектура вне времени" [level=3]
+              - paragraph: Стеклянные парящие бассейны; инновационный каркас вилл из фиброволокна, который прослужит 150 лет; мягкая эксплуатируемая эко-кровля
+          - group "4 / 5":
+            - generic:
+              - generic: (04-05)
+              - heading "Спорт" [level=3]
+              - paragraph: Фитнес, йога, медитации, эко-тропы, падел-корт – все это доступно для вас и ваших гостей на территории клуба
+          - group "5 / 5":
+            - generic:
+              - generic: (05-05)
+              - heading "Детская лесная школа" [level=3]
+              - paragraph: Развивающие программы на природе. Ваши дети будут проситься обратно, потому что лес — лучшее, что вы можете им подарить
+        - group "Навигация по слайдам трендов" [ref=e62]:
+          - button "Previous slide" [ref=e63] [cursor=pointer]:
+            - img [ref=e64]
+          - button "Next slide" [ref=e67] [cursor=pointer]:
+            - img [ref=e68]
+      - link "Узнать как стать резидентом" [ref=e73] [cursor=pointer]:
+        - /url: "#"
+    - generic [ref=e76]:
+      - heading "Вы покупаете не просто виллу, вы покупаете актив" [level=2] [ref=e77]
+      - generic [ref=e78]:
+        - generic [ref=e80]:
+          - generic [ref=e81]: (доход без вашего участия)
+          - heading "Идеальное вложение капитала без «головной боли»" [level=3] [ref=e82]
+        - generic [ref=e85]:
+          - generic [ref=e86]: (двухфакторная модель дохода)
+          - heading "Окупаемость за 7 лет" [level=3] [ref=e87]
+        - generic [ref=e90]:
+          - generic [ref=e91]: (тренд рынка Welness - 1,5 трлн. $)
+          - heading "Минимизация рисков – вы вкладываете в тренд, который подтверждён мировой статистикой" [level=3] [ref=e92]
+        - link "рассчитать доходность" [ref=e95] [cursor=pointer]:
+          - /url: "#"
+    - generic [ref=e101]:
+      - heading "Резиденция, которая работает, пока вы отдыхаете" [level=3] [ref=e102]
+      - paragraph [ref=e103]: Управляемый актив с окупаемостью за 7 лет
+      - link "Получить тизер инвестора" [ref=e104] [cursor=pointer]:
+        - /url: https://b24-2rd93q.bitrix24site.ru/crm_form_kuitd/
+    - generic [ref=e108]:
+      - heading "Экономика проекта" [level=2] [ref=e109]
+      - generic [ref=e110]:
+        - generic [ref=e111]:
+          - group "1 / 3" [ref=e112]:
+            - generic [ref=e113]: (01-03)
+            - heading "Высокая ликвидность" [level=3] [ref=e115]
+            - paragraph [ref=e116]: Уникальная концепция, в самом трендовом сегменте рынка Wellness-индустрии, позволяет прогнозировать окупаемость объекта всего за 7 лет
+          - group "2 / 3":
+            - generic: (02-03)
+            - heading "Вилла для отдыха и стабильного дохода" [level=3]
+            - paragraph: Вы имеете возможность отдыхать на вилле 14 дней в году и получать стабильный доход
+          - group "3 / 3":
+            - generic: (03-03)
+            - heading "Пополните свою коллекцию" [level=3]
+            - paragraph: Вложение капитала в резиденции, которые не только позволят преувеличить доход, но и так же станут жемчужиной в коллекции вашей недвижимости
+        - group "Economy slides navigation" [ref=e117]:
+          - button "Previous slide" [ref=e118] [cursor=pointer]:
+            - img [ref=e119]
+          - button "Next slide" [ref=e122] [cursor=pointer]:
+            - img [ref=e123]
+    - generic [ref=e128]:
+      - generic [ref=e129]:
+        - heading "20 эксклюзивных вилл" [level=2] [ref=e130]
+        - paragraph [ref=e131]: Наведите на участок, чтобы узнать доступность. Схема обновляется в реальном времени — вы видите только актуальные предложения
+      - generic [ref=e132]:
+        - generic:
+          - button "Показать информацию о вилле FOREST VILLA" [expanded] [active] [ref=e133] [cursor=pointer]
+          - article [ref=e134]:
+            - button "Закрыть карточку" [ref=e171] [cursor=pointer]: ×
+            - img "FOREST VILLA" [ref=e172]
+            - heading "FOREST VILLA" [level=3] [ref=e173]
+            - paragraph [ref=e165]: Максимальная приватность в окружении леса
+            - link "ПОДРОБНЕЕ" [ref=e174] [cursor=pointer]:
+              - /url: "#"
+  - region "Уведомление об использовании cookie" [ref=e155]:
+    - heading "Мы используем cookie" [level=2] [ref=e156]
+    - paragraph [ref=e157]:
+      - text: Продолжая пользоваться сайтом, вы соглашаетесь на использование файлов cookie. Подробнее в
+      - link "политике конфиденциальности" [ref=e158] [cursor=pointer]:
+        - /url: /privacy.html
+      - text: .
+    - button "Принять" [ref=e160] [cursor=pointer]
+  - contentinfo [ref=e137]:
+    - generic [ref=e140]:
+      - generic [ref=e142]:
+        - link "partners@panorama.club" [ref=e143] [cursor=pointer]:
+          - /url: "mailto:"
+        - 'link "Адрес офиса продаж: с. Волковка, г.о. Сочи, Краснодарский край" [ref=e144] [cursor=pointer]':
+          - /url: https://yandex.ru/maps/-/CPcDu-JD
+      - link [ref=e146] [cursor=pointer]:
+        - /url: /
+      - link "Политика конфиденциальности" [ref=e148] [cursor=pointer]:
+        - /url: /privacy.html
+      - link "Пользовательское соглашение" [ref=e150] [cursor=pointer]:
+        - /url: /user-agreement.html
+      - generic [ref=e152]:
+        - text: "Дизайн:"
+        - link "Филдс" [ref=e153] [cursor=pointer]:
+          - /url: https://wearefields.ru/
+        - text: ", Разработка:"
+        - link "kata.agency" [ref=e154] [cursor=pointer]:
+          - /url: " https://kata.agency/"
