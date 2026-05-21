@@ -177,6 +177,125 @@ const initAnchorNavigation = () => {
 
 initAnchorNavigation();
 
+const initTechnologiesTabs = () => {
+   const technologiesSection = document.querySelector('.technologies_wrap_content');
+
+   if (!(technologiesSection instanceof HTMLElement)) {
+      return;
+   }
+
+   const tabList = technologiesSection.querySelector('.technologies_wrap_content_list');
+   const buttons = Array.from(technologiesSection.querySelectorAll('.technologies_wrap_content_list_it'));
+   const panels = Array.from(technologiesSection.querySelectorAll('.technologies_wrap_content_info_it'));
+   const panelMap = new Map(
+      panels
+         .filter((panel) => panel.id)
+         .map((panel) => [panel.id, panel])
+   );
+   const hasExplicitMapping = buttons.some((button) => button.dataset.technologiesTarget || button.getAttribute('aria-controls'));
+   const tabItems = buttons
+      .map((button, index) => {
+         const targetId = button.dataset.technologiesTarget || button.getAttribute('aria-controls');
+         const panel = targetId
+            ? panelMap.get(targetId) ?? null
+            : (hasExplicitMapping ? null : panels[index] ?? null);
+
+         return panel ? { button, panel } : null;
+      })
+      .filter(Boolean);
+   const pairedCount = tabItems.length;
+
+   if (!(tabList instanceof HTMLElement) || !pairedCount) {
+      return;
+   }
+
+   tabList.setAttribute('role', 'tablist');
+
+   const setActiveTab = (activeIndex) => {
+      if (activeIndex < 0 || activeIndex >= pairedCount) {
+         return;
+      }
+
+      tabItems.forEach(({ button }, index) => {
+         const isActive = index === activeIndex;
+
+         button.classList.toggle('active', isActive);
+         button.setAttribute('aria-selected', String(isActive));
+         button.setAttribute('tabindex', isActive ? '0' : '-1');
+      });
+
+      const activePanel = tabItems[activeIndex]?.panel ?? null;
+
+      panels.forEach((panel) => {
+         panel.hidden = panel !== activePanel;
+      });
+   };
+
+   const initialActiveIndex = (() => {
+      const activeButtonIndex = tabItems.findIndex(({ button }) => button.classList.contains('active'));
+
+      return activeButtonIndex >= 0 ? activeButtonIndex : 0;
+   })();
+
+   buttons.forEach((button, index) => {
+      button.setAttribute('role', 'tab');
+
+      const tabItemIndex = tabItems.findIndex((item) => item.button === button);
+
+      if (tabItemIndex === -1) {
+         button.setAttribute('aria-disabled', 'true');
+         button.setAttribute('tabindex', '-1');
+         button.classList.remove('active');
+         return;
+      }
+
+      const { panel } = tabItems[tabItemIndex];
+      const buttonId = button.id || `technologies-tab-${tabItemIndex + 1}`;
+      const panelId = panel.id || `technologies-panel-${tabItemIndex + 1}`;
+
+      button.id = buttonId;
+      panel.id = panelId;
+
+      button.setAttribute('aria-controls', panelId);
+      panel.setAttribute('role', 'tabpanel');
+      panel.setAttribute('aria-labelledby', buttonId);
+
+      button.addEventListener('click', () => {
+         setActiveTab(tabItemIndex);
+      });
+
+      button.addEventListener('keydown', (event) => {
+         const isPrevKey = event.key === 'ArrowUp' || event.key === 'ArrowLeft';
+         const isNextKey = event.key === 'ArrowDown' || event.key === 'ArrowRight';
+
+         if (!isPrevKey && !isNextKey && event.key !== 'Home' && event.key !== 'End') {
+            return;
+         }
+
+         event.preventDefault();
+
+         let nextIndex = tabItemIndex;
+
+         if (event.key === 'Home') {
+            nextIndex = 0;
+         } else if (event.key === 'End') {
+            nextIndex = pairedCount - 1;
+         } else if (isPrevKey) {
+            nextIndex = tabItemIndex === 0 ? pairedCount - 1 : tabItemIndex - 1;
+         } else if (isNextKey) {
+            nextIndex = tabItemIndex === pairedCount - 1 ? 0 : tabItemIndex + 1;
+         }
+
+         setActiveTab(nextIndex);
+         tabItems[nextIndex]?.button.focus();
+      });
+   });
+
+   setActiveTab(initialActiveIndex);
+};
+
+initTechnologiesTabs();
+
 const initBurgerMenu = () => {
    const header = document.querySelector('.header');
    const menu = document.querySelector('#burger-menu');
@@ -600,6 +719,175 @@ const initCallbackModal = () => {
 
 initCallbackModal();
 
+const initExclusivePoints = () => {
+   const pointsLayer = document.querySelector('[data-exclusive-points]');
+
+   if (!(pointsLayer instanceof HTMLElement)) {
+      return;
+   }
+
+   const popup = pointsLayer.querySelector('[data-exclusive-popup]');
+   const popupImage = popup?.querySelector('[data-exclusive-popup-image]');
+   const popupTitle = popup?.querySelector('[data-exclusive-popup-title]');
+   const popupText = popup?.querySelector('[data-exclusive-popup-text]');
+   const popupAction = popup?.querySelector('[data-exclusive-popup-action]');
+   const buttons = Array.from(pointsLayer.querySelectorAll('[data-exclusive-point]'))
+      .filter((button) => button instanceof HTMLButtonElement);
+   let activeButton = null;
+
+   if (!(popup instanceof HTMLElement) || !buttons.length) {
+      return;
+   }
+
+   const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
+
+   const syncButtonPositions = () => {
+      buttons.forEach((button) => {
+         const x = Number(button.dataset.pointX);
+         const y = Number(button.dataset.pointY);
+
+         if (Number.isFinite(x)) {
+            button.style.left = `${x}%`;
+         }
+
+         if (Number.isFinite(y)) {
+            button.style.top = `${y}%`;
+         }
+      });
+   };
+
+   const closePopup = () => {
+      popup.classList.remove('is-open');
+      popup.setAttribute('aria-hidden', 'true');
+      popup.hidden = true;
+
+      buttons.forEach((button) => {
+         button.classList.remove('is-active');
+         button.setAttribute('aria-expanded', 'false');
+      });
+
+      activeButton = null;
+   };
+
+   const updatePopupPosition = (button) => {
+      const layerWidth = pointsLayer.clientWidth;
+      const layerHeight = pointsLayer.clientHeight;
+      const gap = 24;
+      const padding = 16;
+      const buttonCenterX = button.offsetLeft + (button.offsetWidth / 2);
+      const buttonTop = button.offsetTop;
+      const buttonBottom = button.offsetTop + button.offsetHeight;
+      const popupWidth = popup.offsetWidth;
+      const popupHeight = popup.offsetHeight;
+      const maxLeft = Math.max(padding, layerWidth - popupWidth - padding);
+      let left = clamp(buttonCenterX - (popupWidth / 2), padding, maxLeft);
+      let top = buttonTop - popupHeight - gap;
+      let direction = 'top';
+
+      if (top < padding) {
+         top = buttonBottom + gap;
+         direction = 'bottom';
+      }
+
+      if (top + popupHeight > layerHeight - padding) {
+         top = clamp(layerHeight - popupHeight - padding, padding, Math.max(padding, layerHeight - popupHeight - padding));
+      }
+
+      popup.style.left = `${left}px`;
+      popup.style.top = `${top}px`;
+      popup.style.setProperty('--exclusive-popup-arrow-left', `${clamp(buttonCenterX - left, 36, popupWidth - 36)}px`);
+      popup.dataset.direction = direction;
+   };
+
+   const fillPopupContent = (button) => {
+      const {
+         title = '',
+         text = '',
+         image = '',
+         modalTitle = '',
+      } = button.dataset;
+
+      if (popupTitle) {
+         popupTitle.textContent = title;
+      }
+
+      if (popupText) {
+         popupText.textContent = text;
+      }
+
+      if (popupImage instanceof HTMLImageElement) {
+         popupImage.src = image || popupImage.src;
+         popupImage.alt = title;
+      }
+
+      if (popupAction instanceof HTMLElement) {
+         popupAction.dataset.modalTitle = modalTitle || title;
+      }
+   };
+
+   const openPopup = (button) => {
+      fillPopupContent(button);
+      popup.hidden = false;
+      popup.setAttribute('aria-hidden', 'false');
+      popup.classList.add('is-open');
+      updatePopupPosition(button);
+
+      buttons.forEach((item) => {
+         const isActive = item === button;
+
+         item.classList.toggle('is-active', isActive);
+         item.setAttribute('aria-expanded', String(isActive));
+      });
+
+      activeButton = button;
+   };
+
+   buttons.forEach((button) => {
+      button.addEventListener('click', (event) => {
+         event.stopPropagation();
+
+         if (activeButton === button) {
+            closePopup();
+            return;
+         }
+
+         openPopup(button);
+      });
+   });
+
+   document.addEventListener('click', (event) => {
+      const target = event.target;
+
+      if (!(target instanceof Node) || !activeButton) {
+         return;
+      }
+
+      if (activeButton.contains(target) || popup.contains(target)) {
+         return;
+      }
+
+      closePopup();
+   });
+
+   document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && activeButton) {
+         closePopup();
+      }
+   });
+
+   window.addEventListener('resize', () => {
+      syncButtonPositions();
+
+      if (activeButton) {
+         updatePopupPosition(activeButton);
+      }
+   });
+
+   syncButtonPositions();
+};
+
+initExclusivePoints();
+
 const initSectionRevealAnimations = () => {
    const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
    const revealConfig = [
@@ -704,4 +992,76 @@ let economy_wrap_swiper = new Swiper('.economy_wrap_swiper', {
       nextEl: '.economy_wrap_swiper_btns_next',
       prevEl: '.economy_wrap_swiper_btns_prev',
    },
+});
+
+let architect_wrap_swiper = new Swiper('.architect_wrap_swiper', {
+   slidesPerView: 1,
+   spaceBetween: 0,
+   speed: 800,
+   grabCursor: true,
+   loop: true,
+   autoHeight: true,
+   effect: 'fade',
+   fadeEffect: {
+      crossFade: true
+   },
+   navigation: {
+      nextEl: '.architect_wrap_swiper_btns_next',
+      prevEl: '.architect_wrap_swiper_btns_prev',
+   },
+});
+
+let interier_wrap_swiper = new Swiper('.interier_wrap_swiper', {
+   slidesPerView: 1,
+   spaceBetween: 0,
+   speed: 800,
+   grabCursor: true,
+   loop: true,
+   effect: 'fade',
+   fadeEffect: {
+      crossFade: true
+   },
+   navigation: {
+      nextEl: '.interier_wrap_swiper_it_btns_next',
+      prevEl: '.interier_wrap_swiper_it_btns_prev',
+   },
+});
+
+$('.location_content_control').on('click', function () {
+   $(this).toggleClass('active')
+   const video = $('.location_content_video video').get(0);
+   if (video.paused) {
+      video.play();
+      $(this).removeClass('active');
+   } else {
+      video.pause();
+      $(this).addClass('active');
+   }
+});
+
+$('.location_content_switch').on('click', function () {
+   const video = $('.location_content_video video').get(0);
+   const map = $('.location_content_map');
+
+   const imgWrapper = $(this).find('.location_content_switch_img');
+   const img = imgWrapper.find('img');
+   const text = $(this).find('span');
+
+   map.toggleClass('active');
+
+   if (map.hasClass('active')) {
+      video.pause();
+
+      img.attr('src', imgWrapper.data('img-video'));
+      text.text('к видео');
+
+      $(this).addClass('active');
+   } else {
+      video.play();
+
+      img.attr('src', imgWrapper.data('img-map'));
+      text.text('на карте');
+
+      $(this).removeClass('active');
+   }
 });

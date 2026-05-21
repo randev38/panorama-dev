@@ -443,6 +443,57 @@
                 </div>
             </div>
         </section>
+        <section class="location">
+            <div class="container">
+                <div class="location_wrap">
+                    <div class="location_wrap_head">
+                        <div class="location_wrap_head_img">
+                            <img src="image/home/location.png" alt="">
+                        </div>
+                        <h2 class="location_wrap_head_title">локация</h2>
+                        <p class="location_wrap_head_text">
+                            В 1896 году Николай II выбрал именно эти земли в Дагомысе. Здесь он нашёл тишину, чистый
+                            воздух и уединение, достойное императорской резиденции. Сегодня — мы их создали
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="location_content">
+                <div class="location_content_video">
+                    <video src="image/home/location.mp4" poster="image/home/location.jpg" autoplay playisline muted
+                        loop></video>
+                </div>
+                <div class="location_content_map">
+                    <iframe
+                        src="https://yandex.ru/map-widget/v1/?um=constructor%3Ac9a03ae58f733cdac5fd0fa8ec0deaf2ecbd405dd77d44cbc63668c9e202a64b&amp;source=constructor"
+                        width="1920" height="900" frameborder="0"></iframe>
+                </div>
+                <div class="container">
+                    <button type="button" class="location_content_switch">
+                        <div class="location_content_switch_img" data-img-map="image/home/mini-map.jpg"
+                            data-img-video="image/home/location.jpg">
+                            <img src="image/home/mini-map.jpg" alt="">
+                        </div>
+                        <span>
+                            на карте
+                        </span>
+                    </button>
+                    <button type="button" class="location_content_control">
+                        <svg class="pause" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50"
+                            fill="none">
+                            <rect width="50" height="50" fill="white" />
+                            <path d="M20 17V33" stroke="black" stroke-linecap="round" />
+                            <path d="M30 17V33" stroke="black" stroke-linecap="round" />
+                        </svg>
+                        <svg class="play" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50"
+                            fill="none">
+                            <rect width="50" height="50" fill="white" />
+                            <path d="M20 16L33 25L20 34V16Z" fill="black" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
         <section class="client client_home">
             <div class="container">
                 <div class="client_wrap">
@@ -556,12 +607,708 @@
                         </p>
                     </div>
                     <div class="exclusive_wrap_content">
-
                         <div class="exclusive_wrap_content_points" data-exclusive-points>
-
+                            <button type="button" class="exclusive_wrap_content_point" data-exclusive-point
+                                data-point-x="47.5" data-point-y="79.5" data-title="FOREST VILLA"
+                                data-text="Максимальная приватность в окружении леса"
+                                data-image="image/home/exclusive.jpg" data-modal-title="Forest Villa"
+                                aria-expanded="false" aria-controls="exclusive-points-popup">
+                                <span class="exclusive_wrap_content_point_icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Открыть информацию о вилле Forest Villa</span>
+                            </button>
+                            <button type="button" class="exclusive_wrap_content_point" data-exclusive-point
+                                data-point-x="35" data-point-y="64" data-title="SUNSET VILLA"
+                                data-text="Просторная вилла с панорамным видом и приватной террасой"
+                                data-image="image/home/exclusive.jpg" data-modal-title="Sunset Villa"
+                                aria-expanded="false" aria-controls="exclusive-points-popup">
+                                <span class="exclusive_wrap_content_point_icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Открыть информацию о вилле Sunset Villa</span>
+                            </button>
+                            <button type="button" class="exclusive_wrap_content_point" data-exclusive-point
+                                data-point-x="58.5" data-point-y="38" data-title="SKYLINE VILLA"
+                                data-text="Уединённая резиденция с бассейном и видом на горный склон"
+                                data-image="image/home/exclusive.jpg" data-modal-title="Skyline Villa"
+                                aria-expanded="false" aria-controls="exclusive-points-popup">
+                                <span class="exclusive_wrap_content_point_icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Открыть информацию о вилле Skyline Villa</span>
+                            </button>
+                            <button type="button" class="exclusive_wrap_content_point" data-exclusive-point
+                                data-point-x="72" data-point-y="57" data-title="CANYON VILLA"
+                                data-text="Светлые интерьеры, приватный участок и близость к инфраструктуре"
+                                data-image="image/home/exclusive.jpg" data-modal-title="Canyon Villa"
+                                aria-expanded="false" aria-controls="exclusive-points-popup">
+                                <span class="exclusive_wrap_content_point_icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Открыть информацию о вилле Canyon Villa</span>
+                            </button>
+                            <div class="exclusive_wrap_content_popup" id="exclusive-points-popup" data-exclusive-popup
+                                aria-hidden="true" hidden>
+                                <div class="exclusive_wrap_content_popup_media">
+                                    <img src="image/home/exclusive.jpg" alt="Forest Villa" data-exclusive-popup-image>
+                                </div>
+                                <div class="exclusive_wrap_content_popup_body">
+                                    <h3 class="exclusive_wrap_content_popup_title" data-exclusive-popup-title>
+                                        FOREST VILLA
+                                    </h3>
+                                    <p class="exclusive_wrap_content_popup_text" data-exclusive-popup-text>
+                                        Максимальная приватность в окружении леса
+                                    </p>
+                                    <button type="button" class="exclusive_wrap_content_popup_btn js-modal-trigger"
+                                        data-exclusive-popup-action data-modal-title="Forest Villa">
+                                        Подробнее
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                         <div class="exclusive_wrap_content_img">
                             <img src="image/home/exclusive.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="architect">
+            <div class="container">
+                <div class="architect_wrap">
+                    <h2 class="architect_wrap_title">
+                        Выберете одну из шести архитектурных концепций в нашем закрытом клубе с потрясающим панорамным
+                        видом
+                    </h2>
+                    <div class="architect_wrap_swiper swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide architect_wrap_swiper_it">
+                                <div class="row">
+                                    <div class="col-xl-9">
+                                        <div class="architect_wrap_swiper_it_img">
+                                            <img src="image/home/arch1.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3">
+                                        <div class="architect_wrap_swiper_it_content">
+                                            <div class="architect_wrap_swiper_it_content_head">
+                                                <div class="architect_wrap_swiper_it_content_head_num">
+                                                    (01 концепция)
+                                                </div>
+                                                <h3 class="architect_wrap_swiper_it_content_head_title">
+                                                    Art Villa
+                                                </h3>
+                                                <p class="architect_wrap_swiper_it_content_head_text">
+                                                    Эта вилла — для тех, кто не ищет типичных решений. Её отличительная
+                                                    особенность — архитектурный бетон, использованный как в интерьере,
+                                                    так
+                                                    и в экстерьере.
+                                                </p>
+                                            </div>
+                                            <div class="architect_wrap_swiper_it_content_info">
+                                                <div class="architect_wrap_swiper_it_content_info_it">
+                                                    <div class="architect_wrap_swiper_it_content_info_it_num">
+                                                        413,2 m²
+                                                    </div>
+                                                    <div class="architect_wrap_swiper_it_content_info_it_title">
+                                                        общая площадь
+                                                    </div>
+                                                </div>
+                                                <div class="architect_wrap_swiper_it_content_info_it">
+                                                    <div class="architect_wrap_swiper_it_content_info_it_num">
+                                                        219 m²
+                                                    </div>
+                                                    <div class="architect_wrap_swiper_it_content_info_it_title">
+                                                        жилое пространство
+                                                    </div>
+                                                </div>
+                                                <div class="architect_wrap_swiper_it_content_info_it">
+                                                    <div class="architect_wrap_swiper_it_content_info_it_num">
+                                                        241,1 m²
+                                                    </div>
+                                                    <div class="architect_wrap_swiper_it_content_info_it_title">
+                                                        жилая площадь с террасой
+                                                    </div>
+                                                </div>
+                                                <div class="architect_wrap_swiper_it_content_info_it">
+                                                    <div class="architect_wrap_swiper_it_content_info_it_num">
+                                                        4
+                                                    </div>
+                                                    <div class="architect_wrap_swiper_it_content_info_it_title">
+                                                        отдельные спальни
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a href="#" class="architect_wrap_swiper_it_content_btn">
+                                                подробнее
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="swiper-slide architect_wrap_swiper_it">
+                                <div class="row">
+                                    <div class="col-xl-9">
+                                        <div class="architect_wrap_swiper_it_img">
+                                            <img src="image/home/arch1.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3">
+                                        <div class="architect_wrap_swiper_it_content">
+                                            <div class="architect_wrap_swiper_it_content_head">
+                                                <div class="architect_wrap_swiper_it_content_head_num">
+                                                    (01 концепция)
+                                                </div>
+                                                <h3 class="architect_wrap_swiper_it_content_head_title">
+                                                    Art Villa
+                                                </h3>
+                                                <p class="architect_wrap_swiper_it_content_head_text">
+                                                    Эта вилла — для тех, кто не ищет типичных решений. Её отличительная
+                                                    особенность — архитектурный бетон, использованный как в интерьере,
+                                                    так
+                                                    и в экстерьере.
+                                                </p>
+                                            </div>
+                                            <div class="architect_wrap_swiper_it_content_info">
+                                                <div class="architect_wrap_swiper_it_content_info_it">
+                                                    <div class="architect_wrap_swiper_it_content_info_it_num">
+                                                        413,2 m²
+                                                    </div>
+                                                    <div class="architect_wrap_swiper_it_content_info_it_title">
+                                                        общая площадь
+                                                    </div>
+                                                </div>
+                                                <div class="architect_wrap_swiper_it_content_info_it">
+                                                    <div class="architect_wrap_swiper_it_content_info_it_num">
+                                                        219 m²
+                                                    </div>
+                                                    <div class="architect_wrap_swiper_it_content_info_it_title">
+                                                        жилое пространство
+                                                    </div>
+                                                </div>
+                                                <div class="architect_wrap_swiper_it_content_info_it">
+                                                    <div class="architect_wrap_swiper_it_content_info_it_num">
+                                                        241,1 m²
+                                                    </div>
+                                                    <div class="architect_wrap_swiper_it_content_info_it_title">
+                                                        жилая площадь с террасой
+                                                    </div>
+                                                </div>
+                                                <div class="architect_wrap_swiper_it_content_info_it">
+                                                    <div class="architect_wrap_swiper_it_content_info_it_num">
+                                                        4
+                                                    </div>
+                                                    <div class="architect_wrap_swiper_it_content_info_it_title">
+                                                        отдельные спальни
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a href="#" class="architect_wrap_swiper_it_content_btn">
+                                                подробнее
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="architect_wrap_swiper_btns" role="group" aria-label="Architect slides navigation">
+                            <button type="button" class="architect_wrap_swiper_btns_prev swiper-button-prev"
+                                aria-label="Previous slide">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"
+                                    fill="none">
+                                    <rect width="48" height="48" transform="translate(48 48) rotate(-180)"
+                                        fill="#F7F6EF" />
+                                    <path d="M33 24L14 24M21.9167 16L14 24L21.9167 32" stroke="black"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                            <button type="button" class="architect_wrap_swiper_btns_next swiper-button-next"
+                                aria-label="Next slide">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"
+                                    fill="none">
+                                    <rect width="48" height="48" fill="#F7F6EF" />
+                                    <path d="M15 24H34M26.0833 32L34 24L26.0833 16" stroke="black"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="interier">
+            <div class="container">
+                <div class="interier_wrap">
+                    <div class="residences_wrap_header">
+                        <h2 class="residences_wrap_header_title">
+                            Интерьеры вилл
+                        </h2>
+                        <p class="residences_wrap_header_text">
+                            Симбиоз мировых трендов и внимание к деталям
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="interier_wrap_swiper swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide interier_wrap_swiper_it">
+                        <div class="interier_wrap_swiper_it_img">
+                            <img src="image/home/interier1.jpg" alt="">
+                        </div>
+                        <div class="container">
+                            <div class="interier_wrap_swiper_it_num">
+                                (01-06)
+                            </div>
+                            <a href="#" class="interier_wrap_swiper_it_btn">
+                                скачать планировки
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide interier_wrap_swiper_it">
+                        <div class="interier_wrap_swiper_it_img">
+                            <img src="image/home/interier1.jpg" alt="">
+                        </div>
+                        <div class="container">
+                            <div class="interier_wrap_swiper_it_num">
+                                (02-06)
+                            </div>
+                            <a href="#" class="interier_wrap_swiper_it_btn">
+                                скачать планировки
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="interier_wrap_swiper_it_btns" role="group" aria-label="Навигация по слайдам интерьеров">
+                    <button type="button" class="interier_wrap_swiper_it_btns_prev swiper-button-prev"
+                        aria-label="Предыдущий слайд">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none"
+                            aria-hidden="true" focusable="false">
+                            <rect width="48" height="48" fill="#F7F6EF" />
+                            <path d="M34 24H15M22.9167 16L15 24L22.9167 32" stroke="black" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <button type="button" class="interier_wrap_swiper_it_btns_next swiper-button-next"
+                        aria-label="Следующий слайд">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none"
+                            aria-hidden="true" focusable="false">
+                            <rect width="48" height="48" fill="#F7F6EF" />
+                            <path d="M15 24H34M26.0833 32L34 24L26.0833 16" stroke="black" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section class="club philosophy">
+            <div class="container">
+                <div class="club_wrap">
+                    <h2 class="club_wrap_title">
+                        Философия и ценности проекта
+                    </h2>
+                    <div class="club_wrap_slider">
+                        <div class="club_wrap_slider_sw swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide club_wrap_slider_sw_it philosophy_slider_it">
+                                    <div class="philosophy_slider_it_head">
+                                        <div class="philosophy_slider_it_head_num">(01)</div>
+                                        <h3 class="philosophy_slider_it_head_title">
+                                            УНИКАЛЬНЫЙ ДЛЯ РОССИИ ПРОЕКТ
+                                        </h3>
+                                    </div>
+                                    <p>
+                                        Российский wellness-рынок ждёт активный рост: тренд смещается от внешней красоты
+                                        к доказательному здоровью, долголетию и ментальному благополучию
+                                    </p>
+                                </div>
+                                <div class="swiper-slide club_wrap_slider_sw_it philosophy_slider_it">
+                                    <div class="philosophy_slider_it_head">
+                                        <div class="philosophy_slider_it_head_num">(02)</div>
+                                        <h3 class="philosophy_slider_it_head_title">
+                                            КОНЦЕПЦИЯ РАСТУЩЕГО РЫНКА
+                                        </h3>
+                                    </div>
+                                    <p>
+                                        Рынок wellness в России растёт: биомаркеры, долголетие, ментальное здоровье —
+                                        новые драйверы спроса
+                                    </p>
+                                </div>
+                                <div class="swiper-slide club_wrap_slider_sw_it philosophy_slider_it">
+                                    <div class="philosophy_slider_it_head">
+                                        <div class="philosophy_slider_it_head_num">(03)</div>
+                                        <h3 class="philosophy_slider_it_head_title">
+                                            АКТИВ, КОТОРЫЙ НЕ ТРЕБУЕТ ВАШЕГО ВРЕМЕНИ
+                                        </h3>
+                                    </div>
+                                    <p>
+                                        Закрытый клуб, где актив приносит доход, а вы — восстанавливаетесь. Управляющая
+                                        компания берёт на себя всё: сервис, администрирование, поиск клиентов
+                                    </p>
+                                </div>
+                                <div class="swiper-slide club_wrap_slider_sw_it philosophy_slider_it">
+                                    <div class="philosophy_slider_it_head">
+                                        <div class="philosophy_slider_it_head_num">(04)</div>
+                                        <h3 class="philosophy_slider_it_head_title">
+                                            ТИШИНА ВНУТРИ – НАДЕЖНОСТЬ СНАРУЖИ
+                                        </h3>
+                                    </div>
+                                    <p>
+                                        Лучшие профессионалы. Инновационные технологии обеспечивают долговечность и
+                                        экологичность резиденций, органично вписанных в горный ландшафт
+                                    </p>
+                                </div>
+                                <div class="swiper-slide club_wrap_slider_sw_it philosophy_slider_it">
+                                    <div class="philosophy_slider_it_head">
+                                        <div class="philosophy_slider_it_head_num">(05)</div>
+                                        <h3 class="philosophy_slider_it_head_title">
+                                            ЮРИДИЧЕСКАЯ ЧИСТОТА
+                                        </h3>
+                                    </div>
+                                    <p>
+                                        Частная собственность на землю, юридическая защита сделки и строительство по
+                                        заключению профессиональных экспертов
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="club_wrap_slider_btns">
+                            <button type="button" aria-label="Предыдущий слайд" title="Предыдущий слайд"
+                                class="swiper-button-prev club_wrap_slider_btns_prev">
+                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="48" height="48" transform="translate(48 48) rotate(-180)"
+                                        fill="#F7F6EF" />
+                                    <path d="M33 24L14 24M21.9167 16L14 24L21.9167 32" stroke="black"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                            <button type="button" aria-label="Следующий слайд" title="Следующий слайд"
+                                class="swiper-button-next club_wrap_slider_btns_next">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"
+                                    fill="none">
+                                    <rect width="48" height="48" fill="#F7F6EF" />
+                                    <path d="M15 24H34M26.0833 32L34 24L26.0833 16" stroke="black"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="philosophy_img">
+                <video src="image/home/phil.mp4" poster="image/home/phil.jpg" autoplay playisline muted loop></video>
+                <p class="philosophy_img_text">
+                    в&nbsp;окружении природы,
+                    в&nbsp;гармонии с&nbsp;собой
+                </p>
+            </div>
+        </section>
+        <section class="technologies">
+            <div class="container">
+                <div class="technologies_wrap">
+                    <h2 class="technologies_wrap_title">
+                        Технологии строительства
+                    </h2>
+                    <div class="technologies_wrap_content">
+                        <div class="technologies_wrap_content_list">
+                            <button type="button" class="technologies_wrap_content_list_it active"
+                                data-technologies-target="technologies-1">
+                                <span class="technologies_wrap_content_list_it_title">
+                                    Проектирование
+                                </span>
+                                <div class="technologies_wrap_content_list_it_icon">
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M20.6377 8V19.3618H32V20.6382H20.6377L20.6386 31.9991L19.3614 32L19.3605 20.639H8V19.361H19.3605L19.3614 8H20.6377Z"
+                                            fill="#B1B1B1" />
+                                    </svg>
+                                </div>
+                            </button>
+                            <button type="button" class="technologies_wrap_content_list_it"
+                                data-technologies-target="technologies-2">
+                                <span class="technologies_wrap_content_list_it_title">
+                                    Фундамент
+                                </span>
+                                <div class="technologies_wrap_content_list_it_icon">
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M20.6377 8V19.3618H32V20.6382H20.6377L20.6386 31.9991L19.3614 32L19.3605 20.639H8V19.361H19.3605L19.3614 8H20.6377Z"
+                                            fill="#B1B1B1" />
+                                    </svg>
+                                </div>
+                            </button>
+                            <button type="button" class="technologies_wrap_content_list_it"
+                                data-technologies-target="technologies-3">
+                                <span class="technologies_wrap_content_list_it_title">
+                                    Каркас здания
+                                </span>
+                                <div class="technologies_wrap_content_list_it_icon">
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M20.6377 8V19.3618H32V20.6382H20.6377L20.6386 31.9991L19.3614 32L19.3605 20.639H8V19.361H19.3605L19.3614 8H20.6377Z"
+                                            fill="#B1B1B1" />
+                                    </svg>
+                                </div>
+                            </button>
+                            <button type="button" class="technologies_wrap_content_list_it"
+                                data-technologies-target="technologies-4">
+                                <span class="technologies_wrap_content_list_it_title">
+                                    Вентиляция
+                                </span>
+                                <div class="technologies_wrap_content_list_it_icon">
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M20.6377 8V19.3618H32V20.6382H20.6377L20.6386 31.9991L19.3614 32L19.3605 20.639H8V19.361H19.3605L19.3614 8H20.6377Z"
+                                            fill="#B1B1B1" />
+                                    </svg>
+                                </div>
+                            </button>
+                            <button type="button" class="technologies_wrap_content_list_it"
+                                data-technologies-target="technologies-5">
+                                <span class="technologies_wrap_content_list_it_title">
+                                    Кровля
+                                </span>
+                                <div class="technologies_wrap_content_list_it_icon">
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M20.6377 8V19.3618H32V20.6382H20.6377L20.6386 31.9991L19.3614 32L19.3605 20.639H8V19.361H19.3605L19.3614 8H20.6377Z"
+                                            fill="#B1B1B1" />
+                                    </svg>
+                                </div>
+                            </button>
+                            <button type="button" class="technologies_wrap_content_list_it"
+                                data-technologies-target="technologies-6">
+                                <span class="technologies_wrap_content_list_it_title">
+                                    коммуникации
+                                </span>
+                                <div class="technologies_wrap_content_list_it_icon">
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M20.6377 8V19.3618H32V20.6382H20.6377L20.6386 31.9991L19.3614 32L19.3605 20.639H8V19.361H19.3605L19.3614 8H20.6377Z"
+                                            fill="#B1B1B1" />
+                                    </svg>
+                                </div>
+                            </button>
+                            <button type="button" class="technologies_wrap_content_list_it"
+                                data-technologies-target="technologies-7">
+                                <span class="technologies_wrap_content_list_it_title">
+                                    Освещение
+                                </span>
+                                <div class="technologies_wrap_content_list_it_icon">
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M20.6377 8V19.3618H32V20.6382H20.6377L20.6386 31.9991L19.3614 32L19.3605 20.639H8V19.361H19.3605L19.3614 8H20.6377Z"
+                                            fill="#B1B1B1" />
+                                    </svg>
+                                </div>
+                            </button>
+                            <button type="button" class="technologies_wrap_content_list_it"
+                                data-technologies-target="technologies-8">
+                                <span class="technologies_wrap_content_list_it_title">
+                                    Бассейн
+                                </span>
+                                <div class="technologies_wrap_content_list_it_icon">
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M20.6377 8V19.3618H32V20.6382H20.6377L20.6386 31.9991L19.3614 32L19.3605 20.639H8V19.361H19.3605L19.3614 8H20.6377Z"
+                                            fill="#B1B1B1" />
+                                    </svg>
+                                </div>
+                            </button>
+                        </div>
+                        <div class="technologies_wrap_content_info">
+                            <div class="technologies_wrap_content_info_it" id="technologies-1">
+                                <p class="technologies_wrap_content_info_text">
+                                    Монолитный фибробетон – бетонный монолит укрепленный фиброволокном, чтобы усилить
+                                    каркас
+                                    здания при сейсмоактивности
+                                </p>
+                                <div class="technologies_wrap_content_info_video">
+                                    <a href="#" class="technologies_wrap_content_info_btn">
+                                        <div class="technologies_wrap_content_info_btn_thumb">
+                                            <img src="image/home/thum-video-tech.png" alt="">
+                                        </div>
+                                        <span>Смотреть видео</span>
+                                        <div class="technologies_wrap_content_info_btn_icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                                viewBox="0 0 30 30" fill="none">
+                                                <path
+                                                    d="M18.5708 14.1425C19.2182 14.5309 19.2182 15.4691 18.5708 15.8575L11.5145 20.0913C10.848 20.4912 10 20.0111 10 19.2338V10.7662C10 9.9889 10.848 9.50878 11.5145 9.9087L18.5708 14.1425Z"
+                                                    stroke="black" />
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="technologies_wrap_content_info_it" id="technologies-2" hidden>
+                                <p class="technologies_wrap_content_info_text">
+                                    Фундамент вилл спроектирован в соответствии с результатами геологических изысканий
+                                    индивидуально для каждого участка. Более чем на 6 метров монолитные сваи уходят
+                                    вглубь твердых пород, что позволяет быть уверенным в том, что дом построен "на века"
+                                </p>
+                                <div class="technologies_wrap_content_info_video">
+                                    <a href="#" class="technologies_wrap_content_info_btn">
+                                        <div class="technologies_wrap_content_info_btn_thumb">
+                                            <img src="image/home/thum-video-tech.png" alt="">
+                                        </div>
+                                        <span>Смотреть видео</span>
+                                        <div class="technologies_wrap_content_info_btn_icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                                viewBox="0 0 30 30" fill="none">
+                                                <path
+                                                    d="M18.5708 14.1425C19.2182 14.5309 19.2182 15.4691 18.5708 15.8575L11.5145 20.0913C10.848 20.4912 10 20.0111 10 19.2338V10.7662C10 9.9889 10.848 9.50878 11.5145 9.9087L18.5708 14.1425Z"
+                                                    stroke="black" />
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="technologies_wrap_content_info_it" id="technologies-3" hidden>
+                                <p class="technologies_wrap_content_info_text">
+                                    Монолитный фибробетон – бетонный монолит укрепленный фиброволокном, чтобы усилить
+                                    каркас
+                                    здания при сейсмоактивности
+                                </p>
+                                <div class="technologies_wrap_content_info_video">
+                                    <a href="#" class="technologies_wrap_content_info_btn">
+                                        <div class="technologies_wrap_content_info_btn_thumb">
+                                            <img src="image/home/thum-video-tech.png" alt="">
+                                        </div>
+                                        <span>Смотреть видео</span>
+                                        <div class="technologies_wrap_content_info_btn_icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                                viewBox="0 0 30 30" fill="none">
+                                                <path
+                                                    d="M18.5708 14.1425C19.2182 14.5309 19.2182 15.4691 18.5708 15.8575L11.5145 20.0913C10.848 20.4912 10 20.0111 10 19.2338V10.7662C10 9.9889 10.848 9.50878 11.5145 9.9087L18.5708 14.1425Z"
+                                                    stroke="black" />
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="technologies_wrap_content_info_it" id="technologies-4" hidden>
+                                <p class="technologies_wrap_content_info_text">
+                                    Фундамент вилл спроектирован в соответствии с результатами геологических изысканий
+                                    индивидуально для каждого участка. Более чем на 6 метров монолитные сваи уходят
+                                    вглубь твердых пород, что позволяет быть уверенным в том, что дом построен "на века"
+                                </p>
+                                <div class="technologies_wrap_content_info_video">
+                                    <a href="#" class="technologies_wrap_content_info_btn">
+                                        <div class="technologies_wrap_content_info_btn_thumb">
+                                            <img src="image/home/thum-video-tech.png" alt="">
+                                        </div>
+                                        <span>Смотреть видео</span>
+                                        <div class="technologies_wrap_content_info_btn_icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                                viewBox="0 0 30 30" fill="none">
+                                                <path
+                                                    d="M18.5708 14.1425C19.2182 14.5309 19.2182 15.4691 18.5708 15.8575L11.5145 20.0913C10.848 20.4912 10 20.0111 10 19.2338V10.7662C10 9.9889 10.848 9.50878 11.5145 9.9087L18.5708 14.1425Z"
+                                                    stroke="black" />
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="technologies_wrap_content_info_it" id="technologies-5" hidden>
+                                <p class="technologies_wrap_content_info_text">
+                                    Монолитный фибробетон – бетонный монолит укрепленный фиброволокном, чтобы усилить
+                                    каркас
+                                    здания при сейсмоактивности
+                                </p>
+                                <div class="technologies_wrap_content_info_video">
+                                    <a href="#" class="technologies_wrap_content_info_btn">
+                                        <div class="technologies_wrap_content_info_btn_thumb">
+                                            <img src="image/home/thum-video-tech.png" alt="">
+                                        </div>
+                                        <span>Смотреть видео</span>
+                                        <div class="technologies_wrap_content_info_btn_icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                                viewBox="0 0 30 30" fill="none">
+                                                <path
+                                                    d="M18.5708 14.1425C19.2182 14.5309 19.2182 15.4691 18.5708 15.8575L11.5145 20.0913C10.848 20.4912 10 20.0111 10 19.2338V10.7662C10 9.9889 10.848 9.50878 11.5145 9.9087L18.5708 14.1425Z"
+                                                    stroke="black" />
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="technologies_wrap_content_info_it" id="technologies-6" hidden>
+                                <p class="technologies_wrap_content_info_text">
+                                    Фундамент вилл спроектирован в соответствии с результатами геологических изысканий
+                                    индивидуально для каждого участка. Более чем на 6 метров монолитные сваи уходят
+                                    вглубь твердых пород, что позволяет быть уверенным в том, что дом построен "на века"
+                                </p>
+                                <div class="technologies_wrap_content_info_video">
+                                    <a href="#" class="technologies_wrap_content_info_btn">
+                                        <div class="technologies_wrap_content_info_btn_thumb">
+                                            <img src="image/home/thum-video-tech.png" alt="">
+                                        </div>
+                                        <span>Смотреть видео</span>
+                                        <div class="technologies_wrap_content_info_btn_icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                                viewBox="0 0 30 30" fill="none">
+                                                <path
+                                                    d="M18.5708 14.1425C19.2182 14.5309 19.2182 15.4691 18.5708 15.8575L11.5145 20.0913C10.848 20.4912 10 20.0111 10 19.2338V10.7662C10 9.9889 10.848 9.50878 11.5145 9.9087L18.5708 14.1425Z"
+                                                    stroke="black" />
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="technologies_wrap_content_info_it" id="technologies-7" hidden>
+                                <p class="technologies_wrap_content_info_text">
+                                    Монолитный фибробетон – бетонный монолит укрепленный фиброволокном, чтобы усилить
+                                    каркас
+                                    здания при сейсмоактивности
+                                </p>
+                                <div class="technologies_wrap_content_info_video">
+                                    <a href="#" class="technologies_wrap_content_info_btn">
+                                        <div class="technologies_wrap_content_info_btn_thumb">
+                                            <img src="image/home/thum-video-tech.png" alt="">
+                                        </div>
+                                        <span>Смотреть видео</span>
+                                        <div class="technologies_wrap_content_info_btn_icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                                viewBox="0 0 30 30" fill="none">
+                                                <path
+                                                    d="M18.5708 14.1425C19.2182 14.5309 19.2182 15.4691 18.5708 15.8575L11.5145 20.0913C10.848 20.4912 10 20.0111 10 19.2338V10.7662C10 9.9889 10.848 9.50878 11.5145 9.9087L18.5708 14.1425Z"
+                                                    stroke="black" />
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="technologies_wrap_content_info_it" id="technologies-8" hidden>
+                                <p class="technologies_wrap_content_info_text">
+                                    Технология «парящего» бассейна создает визуальный эффект отсутствия границ или
+                                    парения в воздухе. Вода переливается через край, стекая по скрытым стенам в желоба,
+                                    что создает эффект «бесконечности»
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="client client_home">
+            <div class="container">
+                <div class="client_wrap">
+                    <div class="client_wrap_content">
+                        <div class="client_wrap_content_it">
+                            <div class="client_wrap_content_it_text" style="background: #4C463F;">
+                                <h3 class="client_wrap_content_it_text_title" style="color: #FFF;">
+                                    Актив, которым гордятся
+                                </h3>
+                                <p style="color: #FFF;">Узнать подробнее о проекте и получить расчет доходности</p>
+                                <a href="https://b24-2rd93q.bitrix24site.ru/crm_form_kuitd/" rel="noreferrer noopener"
+                                    target="_blank" style="background: #FFF; color: #000;">Получить тизер инвестора</a>
+                            </div>
+                            <div class="client_wrap_content_it_img">
+                                <img src="image/home/active-tizer.jpg" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
